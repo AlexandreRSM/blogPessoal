@@ -8,29 +8,30 @@
                     
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Insira seu nome">
+                        <input [(ngModel)]= 'userLogin.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Insira seu nome">
                     </div>
 
                     <div class="form-group">
                         <label for="usuario">Usuário</label>
-                        <input class="form-control" type="text" name="usuario" id="usuario"
+                        <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
+                        id="nome" placeholder="Seu nome" 
                             placeholder="Insira o nome de usuário">
                     </div>
 
                     <div class="form-group">
                         <label for="foto">Link da foto</label>
-                        <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                        <input [(ngModel)]='userLogin.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
                     </div>
 
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input class="form-control" type="password" name="senha" id="senha"
+                        <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha"
                             placeholder="Insira sua senha">
                     </div>
 
                     <div class="form-group">
                         <label for="confirmSenha">Confirmar Senha</label>
-                        <input class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+                        <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
                             placeholder="Confirme sua senha">
                     </div>
 
